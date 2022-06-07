@@ -100,6 +100,7 @@ void run_with_bheap(int x) {
 				int path = was[i] + val;
 				if (path < was[j]) {
 					was[j] = path;
+					last[j] = i;
 					h.push({ val,j });
 				}
 			}
@@ -133,6 +134,7 @@ void run_with_array(int x) {
 				int path = was[i] + val;
 				if (path < was[j]) {
 					was[j] = path;
+					last[j] = i;
 					v.push_back({ val,j });
 				}
 			}
